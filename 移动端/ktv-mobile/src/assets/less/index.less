@@ -1,0 +1,77 @@
+@screenWidth: 750;
+// 定义vw
+@vw: (@screenWidth / 100vw);
+// 设置高宽
+.setwh(@w: 750, @h: 1550) {
+    width: (@w / @vw);
+    height: (@h / @vw);
+}
+
+// 设置定位
+.lt(@l: 0, @t: 0) {
+    position: absolute;
+    left: (@l/@vw);
+    top: (@t/@vw);
+}
+
+//右上
+.rt(@r: 0, @t: 0) {
+    position: absolute;
+    right: (@r/@vw);
+    top: (@t/@vw);
+}
+
+//less 定位函数 左下
+.lb(@l: 0, @b: 0) {
+    position: absolute;
+    left: (@l/@vw);
+    bottom: (@b/@vw);
+}
+
+//右下
+.rb(@r: 0, @b: 0) {
+    position: absolute;
+    right: (@r/@vw);
+    bottom: (@b/@vw);
+}
+
+//水平居中
+.cl(@w) {
+    position: absolute;
+    left: 50%;
+    margin-left: -(@w/2/@vw);
+}
+
+//垂直居中
+.ct(@h) {
+    position: absolute;
+    top: 50%;
+    margin-top: -(@h/2/@vw);
+}
+
+//垂直水平居中
+.czjz() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+//首页
+.home {
+    width: 100%;
+    height: 100%;
+}
+
+//背景图片
+.bg {
+    width: 100vw;
+    height: 100vh;
+}
